@@ -1,6 +1,5 @@
 import * as vscode from "vscode";
-import { ElementCompletionItemProvider } from "./completion/element-completion-item-povider";
-
+import { ElementHoverProvier } from "./hover-tips/element-hover-provider";
 export function activate(context: vscode.ExtensionContext) {
   console.log('Congratulations, your extension "vui-helper" is now active!');
 
@@ -10,26 +9,16 @@ export function activate(context: vscode.ExtensionContext) {
       vscode.window.showInformationMessage("Hello World from vui-helper!");
     }
   );
-  let doc = vscode.languages.registerCompletionItemProvider(
+  let hover = vscode.languages.registerHoverProvider(
     [
       {
         language: "vue",
         scheme: "file",
       },
     ],
-    new ElementCompletionItemProvider(),
-    "",
-    " ",
-    ":",
-    "<",
-    '"',
-    "'",
-    "/",
-    "@",
-    "(",
-    "-"
+    new ElementHoverProvier()
   );
-  context.subscriptions.push(doc);
+  context.subscriptions.push(hover);
   context.subscriptions.push(disposable);
 }
 

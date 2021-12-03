@@ -1,8 +1,7 @@
 export enum ExtensionLanguage {
-  cn = 'zh-CN',
-  en = 'en-US'
+  cn = "zh-CN",
 }
 
 export interface ExtensionConfigutation {
-  language: ExtensionLanguage
+  language: ExtensionLanguage;
 }
