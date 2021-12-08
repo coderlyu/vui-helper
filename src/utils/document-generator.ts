@@ -34,7 +34,7 @@ export class HoverDocumentGenerator {
       markdownString.appendMarkdown(
         "| 属性 | 说明 | 类型 | 可选值 | 默认值 |\r"
       );
-      markdownString.appendMarkdown("|:-:|:-:|:-:|:-:|:-:|\r");
+      markdownString.appendMarkdown("|---|:-:|:-:|:-:|:-:|\r");
     }
     if (attribute.length === 0) {
       // 属性 和标签一样 显示全部
@@ -177,7 +177,7 @@ export class HoverDocumentGenerator {
     if (slots.length) {
       markdownString.appendMarkdown(`### ${tag} 插槽\r`);
       markdownString.appendMarkdown("| 插槽 | 说明 |\r");
-      markdownString.appendMarkdown("|---|---|\r");
+      markdownString.appendMarkdown("|---|:-:|\r");
     }
     if (attribute.length === 0) {
       // 属性 和标签一样 显示全部

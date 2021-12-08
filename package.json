@@ -10,18 +10,10 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vui-helper.helloWorld",
     "onLanguage:vue"
   ],
   "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "vui-helper.helloWorld",
-        "title": "Hello World"
-      }
-    ]
-  },
+  "contributes": {},
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
