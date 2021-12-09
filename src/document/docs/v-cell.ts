@@ -31,7 +31,7 @@ export const attributes: DocumentAttribute[] = [
     name: "size",
     description: "单元格大小，可选值为 large",
     type: "string",
-    value: "large/—",
+    value: "large/''",
     default: "—",
   },
   {
