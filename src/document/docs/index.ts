@@ -30,6 +30,37 @@ import ActionSheet from "./v-action-sheet";
 import Dialog from "./v-dialog";
 import DropdownMenu from "./v-dropdown-menu";
 import DropdownItem from "./v-dropdown-item";
+import Loading from "./v-loading";
+import Overlay from "./v-overlay";
+import Popover from "./v-popover";
+import PullRefresh from "./v-pull-refresh";
+import SwipeCell from "./v-swipe-cell";
+import Badge from "./v-badge";
+import Circle from "./v-circle";
+import Collapse from "./v-collapse";
+import CollapseItem from "./v-collapse-item";
+import CountDown from "./v-count-down";
+import Divider from "./v-divider";
+import ImagePreview from "./v-image-preview";
+import Progress from "./v-progress";
+import Skeleton from "./v-skeleton";
+import Step from "./v-step";
+import Steps from "./v-steps";
+import Sticky from "./v-sticky";
+import Swipe from "./v-swipe";
+import SwipeItem from "./v-swipe-item";
+import Tag from "./v-tag";
+import Video from "./v-video";
+import Grid from "./v-grid";
+import GridItem from "./v-grid-item";
+import IndexBar from "./v-index-bar";
+import IndexAnchor from "./v-index-anchor";
+import NavBar from "./v-nav-bar";
+import Pagination from "./v-pagination";
+import Sidebar from "./v-sidebar";
+import SidebarItem from "./v-sidebar-item";
+import Tab from "./Tab";
+import Tabs from "./v-tabs";
 
 export default {
   "v-empty": Empty,
@@ -64,4 +95,35 @@ export default {
   "v-dialog": Dialog,
   "v-dropdown-menu": DropdownMenu,
   "v-dropdown-item": DropdownItem,
+  "v-loading": Loading,
+  "v-overlay": Overlay,
+  "v-popover": Popover,
+  "v-pull-refresh": PullRefresh,
+  "v-swipe-cell": SwipeCell,
+  "v-badge": Badge,
+  "v-circle": Circle,
+  "v-collapse": Collapse,
+  "v-collapse-item": CollapseItem,
+  "v-count-down": CountDown,
+  "v-divider": Divider,
+  "v-image-preview": ImagePreview,
+  "v-progress": Progress,
+  "v-skeleton": Skeleton,
+  "v-step": Step,
+  "v-steps": Steps,
+  "v-sticky": Sticky,
+  "v-swipe": Swipe,
+  "v-swipe-item": SwipeItem,
+  "v-tag": Tag,
+  "v-video": Video,
+  "v-grid": Grid,
+  "v-grid-item": GridItem,
+  "v-index-bar": IndexBar,
+  "v-index-anchor": IndexAnchor,
+  "v-nav-bar": NavBar,
+  "v-pagination": Pagination,
+  "v-sidebar": Sidebar,
+  "v-sidebar-item": SidebarItem,
+  "": Tab,
+  "v-tabs": Tabs,
 };
