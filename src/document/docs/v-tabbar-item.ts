@@ -2,22 +2,29 @@ import { DocumentSlot, DocumentAttribute, UIDocument } from "../index";
 
 export const attributes: DocumentAttribute[] = [
   {
-    name: "title",
-    description: "标题",
+    name: "name",
+    description: "标签名称，作为匹配的标识符",
+    type: "number/string",
+    value: "—",
+    default: "当前标签的索引值",
+  },
+  {
+    name: "icon",
+    description: "图标名称或图片链接",
     type: "string",
     value: "—",
     default: "—",
   },
   {
-    name: "disabled",
-    description: "是否禁用标签",
-    type: "boolean",
+    name: "icon-prefix",
+    description: "图标类名前缀，同 Icon 组件的 class-prefix 属性",
+    type: "string",
     value: "—",
-    default: "false",
+    default: "v-icon",
   },
   {
     name: "dot",
-    description: "是否在标题右上角显示小红点",
+    description: "是否显示图标右上角小红点",
     type: "boolean",
     value: "—",
     default: "false",
@@ -30,13 +37,6 @@ export const attributes: DocumentAttribute[] = [
     default: "—",
   },
   {
-    name: "name",
-    description: "标签名称，作为匹配的标识符",
-    type: "number/string",
-    value: "—",
-    default: "标签的索引值",
-  },
-  {
     name: "url",
     description: "点击后跳转的链接地址",
     type: "string",
@@ -46,7 +46,7 @@ export const attributes: DocumentAttribute[] = [
   {
     name: "to",
     description: "点击后跳转的目标路由对象，同 vue-router 的 to 属性",
-    type: "string/object",
+    type: "number/object",
     value: "—",
     default: "—",
   },
@@ -57,18 +57,10 @@ export const attributes: DocumentAttribute[] = [
     value: "—",
     default: "false",
   },
-  {
-    name: "title-style",
-    description: "自定义标题样式",
-    type: "any",
-    value: "—",
-    default: "—",
-  },
 ];
 
 export const slots: DocumentSlot[] = [
-  { name: "default", description: "标签页内容" },
-  { name: "title", description: "自定义标题" },
+  { name: "icon", description: "自定义图标" },
 ];
 
 export const document: UIDocument = { attributes, slots };

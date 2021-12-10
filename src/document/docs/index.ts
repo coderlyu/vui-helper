@@ -59,8 +59,12 @@ import NavBar from "./v-nav-bar";
 import Pagination from "./v-pagination";
 import Sidebar from "./v-sidebar";
 import SidebarItem from "./v-sidebar-item";
-import Tab from "./Tab";
+import Tab from "./v-tab";
 import Tabs from "./v-tabs";
+import Tabbar from "./v-tabbar";
+import TabbarItem from "./v-tabbar-item";
+import TreeSelect from "./v-tree-select";
+import Modal from "./v-modal";
 
 export default {
   "v-empty": Empty,
@@ -124,6 +128,10 @@ export default {
   "v-pagination": Pagination,
   "v-sidebar": Sidebar,
   "v-sidebar-item": SidebarItem,
-  "": Tab,
+  "v-tab": Tab,
   "v-tabs": Tabs,
+  "v-tabbar": Tabbar,
+  "v-tabbar-item": TabbarItem,
+  "v-tree-select": TreeSelect,
+  "v-modal": Modal,
 };
