@@ -3,16 +3,32 @@
   "displayName": "vui-helper",
   "description": "vui-helper",
   "version": "0.0.1",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.51.0"
   },
+  "keywords": [
+    "vui",
+    "mobile",
+    "vue",
+    "snippets"
+  ],
   "categories": [
     "Other",
     "Snippets"
   ],
+  "publisher": "coderly",
+  "author": "coderly <https://github.com/coderlyu>",
   "activationEvents": [
     "onLanguage:vue"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coderlyu/vui-helper"
+  },
+  "bugs": {
+    "url": "https://github.com/coderlyu/vui-helper/issues"
+  },
   "main": "./lib/extension.js",
   "contributes": {},
   "scripts": {
