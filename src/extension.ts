@@ -1,11 +1,4 @@
 import * as vscode from "vscode";
-import {
-  TextDocument,
-  Position,
-  CancellationToken,
-  ProviderResult,
-  Hover,
-} from "vscode";
 import { ElementCompletionProvider } from "./completion";
 import { ElementHoverProvider } from "./hover/provider";
 export function activate(context: vscode.ExtensionContext) {
