@@ -9,14 +9,14 @@ import {
   Range,
 } from "vscode";
 import { toKebabCase } from "../utils";
-import { VuiDocument, UIDocument } from "../document";
+import { VUIDocument, UIDocument } from "../document";
 import { HoverDocumentGenerator } from "../utils/document-generator";
 
 export interface TagObject {
   text: string;
   offset: number;
 }
-export class ElementHoverProvier implements HoverProvider {
+export class ElementHoverProvider implements HoverProvider {
   private _position!: Position;
   private _document!: TextDocument;
   private _token!: CancellationToken;
@@ -31,9 +31,7 @@ export class ElementHoverProvier implements HoverProvider {
     this._document = document;
     this._position = position;
     this._token = token;
-    console.log(document, position, token);
     const tag: TagObject | undefined = this.getTag();
-    console.log(tag);
     if (!/^v/.test(tag?.text || "")) {
       // 如果不是element的标签(V|v开头) 则返回 null 表示没有hover
       return null;
@@ -63,7 +61,7 @@ export class ElementHoverProvier implements HoverProvider {
    * @param range 范围
    */
   createHoverInstance(tag: string, attr: string, range: Range): null | Hover {
-    let document = VuiDocument;
+    let document = VUIDocument;
     if (tag === attr) {
       attr = "";
     }

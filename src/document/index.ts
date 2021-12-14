@@ -83,7 +83,7 @@ export interface BaseDocument {
 }
 
 /**
- * ElementUI文档类型
+ * VUI文档类型
  * 用于扩展具有其他字段的文档类型
  *
  * @export
@@ -108,4 +108,4 @@ export type LocalDocument = Record<string, any>;
 import AllDocument from "./docs/index";
 
 // 统一导出文档
-export const VuiDocument: LocalDocument = AllDocument;
+export const VUIDocument: LocalDocument = AllDocument;
