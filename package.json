@@ -2,7 +2,7 @@
   "name": "vui-helper",
   "displayName": "vui-helper",
   "description": "vui-helper",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.51.0"
@@ -17,11 +17,11 @@
     "Other",
     "Snippets"
   ],
-  "publisher": "coderly",
-  "author": "coderly <https://github.com/coderlyu>",
   "activationEvents": [
     "onLanguage:vue"
   ],
+  "publisher": "coderly",
+  "author": "coderly <https://github.com/coderlyu>",
   "repository": {
     "type": "git",
     "url": "https://github.com/coderlyu/vui-helper"
@@ -32,6 +32,7 @@
   "main": "./lib/extension.js",
   "contributes": {},
   "scripts": {
+    "cz": "cz",
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
@@ -40,16 +41,37 @@
     "test": "node ./lib/test/runTest.js"
   },
   "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
     "@types/glob": "^7.1.3",
     "@types/mocha": "^8.0.4",
     "@types/node": "^12.11.7",
     "@types/vscode": "^1.51.0",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.19.0",
+    "eslint-config-prettier": "^8.3.0",
     "glob": "^7.1.6",
+    "husky": "^7.0.4",
+    "intermock": "^0.2.5",
     "mocha": "^8.2.1",
+    "prettier": "2.5.1",
+    "tslint-plugin-prettier": "^2.3.0",
     "typescript": "^4.1.3",
     "vscode-test": "^1.5.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{vue,js,less,css,json,md,jsx,tsx,ts}": "prettier --write"
   }
 }
